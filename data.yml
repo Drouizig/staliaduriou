@@ -1,0 +1,42 @@
+software:
+  firefox:
+    win_32: "firefox_win32.exe"
+    win_64: "firefox_win64.exe"
+    mac: "firefox_mac.dmg"
+    linux_32: "firefox_linux32.tar.bz2"
+    linux_64: "firefox_linux64.tar.bz2"
+    name: "Firefox"
+    description: "Merdeer web"
+    image: ~
+  thunderbird:
+    win_32: "thunderbird_win.exe"
+    win_64: ~
+    mac: "thunderbird_mac.dmg"
+    linux_32: ~
+    linux_64: ~
+    name: "Thunderbird"
+    description: "Lenner posteloù"
+    image: ~
+
+hunspell:
+  libreoffice:
+    oxt: "difazier_libreoffice.oxt"
+    name: "Difazier Hunspell evit libreoffice"
+
+difazier:
+  version_1619:
+    win_64: "builds/difazier_office1619_64.exe"
+    win_32: "builds/difazier_office1619_32.msi"
+    name: "Microsoft Office 2016/2019"
+  version_13:
+    win_64: "builds/difazier_office13_64.exe"
+    win_32: "builds/difazier_office13_32.msi"
+    name: "Microsoft Office 2013"
+  version_10:
+    win_64: "builds/difazier_office10_64.exe"
+    win_32: "builds/difazier_office10_32.msi"
+    name: "Microsoft Office 2010"
+  version_0007:
+    win_64: ~
+    win_32: "builds/difazier_office0007.msi"
+    name: "Microsoft Office 2000, 2002, 2003, 2007"

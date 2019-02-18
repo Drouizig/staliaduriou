@@ -39,8 +39,8 @@ wget "https://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/0.9.3/Sup
 wget "https://extensions.libreoffice.org/extensions/an-drouizig-breton-spellchecker/0.16/@@download/file/difazier-an-drouizig-0.16.oxt" -O builds/difazier_libreoffice.oxt
 
 # An Drouizig Difazier
-wget "http://www.drouizig.org/images/stories/difazier/win/pakadaou/breton_spellchecker_m41_2016_x86_win32.msi" -O builds/difazier_office1619_64.msi
-wget "http://www.drouizig.org/images/stories/difazier/win/pakadaou/breton_spellchecker_m41_2016_x86_win64.exe" -O builds/difazier_office1619_32.exe
+wget "http://www.drouizig.org/images/stories/difazier/win/pakadaou/breton_spellchecker_m41_2016_x86_win32.msi" -O builds/difazier_office1619_32.msi
+wget "http://www.drouizig.org/images/stories/difazier/win/pakadaou/breton_spellchecker_m41_2016_x86_win64.exe" -O builds/difazier_office1619_64.exe
 wget "http://www.drouizig.org/images/stories/difazier/win/pakadaou/breton_spellchecker_m41_2013_x86_win32.msi" -O builds/difazier_office13_32.msi
 wget "http://www.drouizig.org/images/stories/difazier/win/pakadaou/breton_spellchecker_m41_2013_x86_win64.exe" -O builds/difazier_office13_64.exe
 wget "http://www.drouizig.org/images/stories/difazier/win/pakadaou/breton_spellchecker_m41_2010_x86_win32.msi" -O builds/difazier_office10_32.msi
