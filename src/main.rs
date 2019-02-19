@@ -55,53 +55,43 @@ struct StaliadurData {
     difazier: BTreeMap<String, Difazier>,
 }
 
-struct StaliadurDataWrapper {
-    data: StaliadurData
-}
+// struct StaliadurDataWrapper {
+//     data: StaliadurData
+// }
 
-enum System {
-    Windows,
-    Mac,
-    Linux
+struct OsInfo {
+    system: Option<String>
 }
-enum Architecture {
-    x64,
-    i386
-}
-
-struct System(String);
 
 #[derive(Debug)]
 enum UserSystemError {
     NotFound,
 }
 
-impl<'a, 'r> FromRequest<'a, 'r> for System {
+impl<'a, 'r> FromRequest<'a, 'r> for OsInfo {
     type Error = UserSystemError;
 
     fn from_request(request: &'a Request<'r>) -> request::Outcome<Self, Self::Error> {
         let user_agent: Vec<_> = request.headers().get("User-Agent").collect();
         match user_agent.len() {
-            1  => Outcome::Success(get_os_and_arch(user_agent[0])),
-            _ => Outcome::Success(OsInfo{os: None}),
+            1  => Outcome::Success(OsInfo{ system: get_os(user_agent[0])}),
+            _ => Outcome::Success(OsInfo{system: None}),
         }
     }
 }
 
-fn get_os_and_arch(user_agent: &str) -> OsInfo {
+fn get_os(user_agent: &str) -> Option<String> {
     let parser = Parser::new();
     let result = parser.parse(user_agent);
     println!("{:?}", result);
-    OsInfo {
-        os: None,
-    }
+    None
 }
 
 
 #[get("/")]
-fn index(dataWrapper: State<StaliadurDataWrapper>, os_info: OsInfo) -> Template {
-    println!("{:?}", dataWrapper.data.software);
-    Template::render("index", &dataWrapper.data)
+fn index(data: State<StaliadurData>, os_info: OsInfo) -> Template {
+    //println!("{:?}", dataWrapper.data.software);
+    Template::render("index", &data.inner())
 }
 
 
@@ -114,6 +104,6 @@ fn main() {
     rocket::ignite()
         .mount("/", routes![index])
         .attach(Template::fairing())
-        .manage(StaliadurDataWrapper{data: data})
+        .manage(data)
         .launch();
 }
