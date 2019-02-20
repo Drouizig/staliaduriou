@@ -3,6 +3,9 @@
 #[macro_use] extern crate rocket;
 
 #[macro_use] extern crate serde_derive;
+
+mod model;
+
 use serde_yaml;
 use woothee::parser::Parser;
 use std::io;
@@ -14,50 +17,7 @@ use rocket_contrib::templates::Template;
 use rocket::request::{self, Request, FromRequest};
 use rocket::Outcome;
 use rocket::http::Status;
-
-#[derive(Debug)]
-#[derive(Deserialize)]
-#[derive(Serialize)]
-struct Software {
-    win_32: Option<String>,
-    win_64: Option<String>,
-    mac: Option<String>,
-    linux_32: Option<String>,
-    linux_64: Option<String>,
-    name: Option<String>,
-    description: Option<String>,
-    image: Option<String>
-}
-#[derive(Debug)]
-#[derive(Deserialize)]
-#[derive(Serialize)]
-struct Hunspell {
-    oxt: Option<String>,
-    name: Option<String>
-}
-
-
-#[derive(Deserialize)]
-#[derive(Serialize)]
-#[derive(Debug)]
-struct Difazier {
-    win_64: Option<String>,
-    win_32: Option<String>,
-    name: Option<String>
-}
-
-#[derive(Deserialize)]
-#[derive(Serialize)]
-#[derive(Debug)]
-struct StaliadurData {
-    software: BTreeMap<String, Software>,
-    hunspell: BTreeMap<String, Hunspell>,
-    difazier: BTreeMap<String, Difazier>,
-}
-
-// struct StaliadurDataWrapper {
-//     data: StaliadurData
-// }
+use model::StaliadurData;
 
 struct OsInfo {
     system: Option<String>
@@ -82,16 +42,23 @@ impl<'a, 'r> FromRequest<'a, 'r> for OsInfo {
 
 fn get_os(user_agent: &str) -> Option<String> {
     let parser = Parser::new();
-    let result = parser.parse(user_agent);
-    println!("{:?}", result);
+    if let Some(result) = parser.parse(user_agent) {
+      return Some(result.os);
+    }
     None
 }
 
+#[derive(Serialize)]
+struct TemplateContext {
+    data: *const StaliadurData,
+    system: Option<String>
+}
 
 #[get("/")]
 fn index(data: State<StaliadurData>, os_info: OsInfo) -> Template {
-    //println!("{:?}", dataWrapper.data.software);
-    Template::render("index", &data.inner())
+    println!("{:?}", data.inner());
+    let templateData = TemplateContext{data: &data.inner(), system: os_info.system};
+    Template::render("index", &templateData)
 }
 
 
