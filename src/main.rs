@@ -17,6 +17,7 @@ use model::StaliadurData;
 use rocket_contrib::serve::StaticFiles;
 use std::sync::RwLock;
 use std::time::SystemTime;
+use rocket::response::Redirect;
 
 struct DataReader {
     reader: RwLock<StaliadurData>,
@@ -24,7 +25,8 @@ struct DataReader {
 }
 
 struct OsInfo {
-    system: Option<String>
+    system: Option<String>,
+    platform: Option<String>
 }
 
 #[derive(Debug)]
@@ -38,18 +40,18 @@ impl<'a, 'r> FromRequest<'a, 'r> for OsInfo {
     fn from_request(request: &'a Request<'r>) -> request::Outcome<Self, Self::Error> {
         let user_agent: Vec<_> = request.headers().get("User-Agent").collect();
         match user_agent.len() {
-            1  => Outcome::Success(OsInfo{ system: get_os(user_agent[0])}),
-            _ => Outcome::Success(OsInfo{system: None}),
+            1  => Outcome::Success(get_os_info(user_agent[0])),
+            _ => Outcome::Success(OsInfo{system: None, platform: None}),
         }
     }
 }
 
-fn get_os(user_agent: &str) -> Option<String> {
+fn get_os_info(user_agent: &str) -> OsInfo {
     let parser = Parser::new();
     if let Some(result) = parser.parse(user_agent) {
-      return Some(result.os);
+      return OsInfo{system: Some(result.os), platform: Some(result.category)};
     }
-    None
+    OsInfo{system: None, platform: None}
 }
 
 #[derive(Serialize)]
@@ -60,7 +62,16 @@ struct TemplateContext<'a> {
 }
 
 #[get("/")]
-fn index(data: State<DataReader>, os_info: OsInfo) -> Template {
+fn index(os_info: OsInfo) -> Redirect {
+    match os_info.platform {
+        Some(ref x) if x == "smartphone" => return Redirect::to("/hezoug"),
+        _ => ()
+    }
+
+    Redirect::to("/meziantou")
+}
+#[get("/meziantou")]
+fn meziantou(data: State<DataReader>, os_info: OsInfo) -> Template {
     update_data(&data);
     let templateContext = TemplateContext{data: &data.inner().reader.read().unwrap(), system: os_info.system, page: "meziantou"};
     Template::render("index", &templateContext)
@@ -108,7 +119,7 @@ fn main() {
     let last_accessed_file = f.metadata().unwrap().modified().unwrap();
 
     rocket::ignite()
-        .mount("/", routes![index, hezoug, difazier, choariou, traouall])
+        .mount("/", routes![index, meziantou, hezoug, difazier, choariou, traouall])
         .mount("/static", StaticFiles::from("static"))
         .attach(Template::fairing())
         .manage(DataReader{ reader: RwLock::new(data), last_accessed: last_accessed_file})
