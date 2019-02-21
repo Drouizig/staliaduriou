@@ -1,0 +1,18 @@
+{% macro trans_system(code, archi=false) %}
+    {%if code == "win_32"%}
+        Windows{%if archi%} (32-bit){%endif%}
+    {%elif code =="win_64"%}
+        Windows{%if archi%} (64-bit){%endif%}
+    {%elif code =="mac"%}
+        Mac OS
+    {%elif code =="linux_32"%}
+        GNU/Linux{%if archi%} (32-bit){%endif%}
+    {%elif code =="linux_64"%}
+        GNU/Linux{%if archi%} (64-bit){%endif%}
+    {%elif code =="android"%}
+        Android
+    {%elif code =="ios"%}
+        iPhone
+    {%endif%}
+
+{%endmacro trans_system%}

@@ -1,5 +1,5 @@
 software:
-  firefox:
+  1_firefox:
     win_32: "firefox_win32.exe"
     win_64: "firefox_win64.exe"
     mac: "firefox_mac.dmg"
@@ -7,8 +7,8 @@ software:
     linux_64: "firefox_linux64.tar.bz2"
     name: "Firefox"
     description: "Merdeer web"
-    image: ~
-  thunderbird:
+    image: "firefox.png"
+  2_thunderbird:
     win_32: "thunderbird_win.exe"
     win_64: ~
     mac: "thunderbird_mac.dmg"
@@ -16,7 +16,99 @@ software:
     linux_64: ~
     name: "Thunderbird"
     description: "Lenner posteloù"
-    image: ~
+    image: "thunderbird.png"
+  3_libreoffice:
+    win_32: "libreoffice_win32.msi"
+    win_64: "libreoffice_win64.msi"
+    mac: "libreoffice_mac.dmg"
+    linux_32: ~
+    linux_64: ~
+    name: "LibreOffice"
+    description: "Heuliad burevek"
+    image: "libreoffice.png"
+  4_clementine:
+    win_32: "clementine_win.exe"
+    win_64: ~
+    mac: "clementine_mac.dmg"
+    linux_32: ~
+    linux_64: ~
+    name: "Clementine"
+    description: "Lenner sonerezh"
+    image: "clementine.png"
+  5_gimp:
+    win_32: "gimp_windows.exe"
+    win_64: ~
+    mac: "gimp_mac.dmg"
+    linux_32: ~
+    linux_64: ~
+    name: "Gimp"
+    description: "Embanner skeudennoù"
+    image: "gimp.gif"
+
+choariou:
+  supertux:
+    win_32: "supertux_win32.exe"
+    win_64: "supertux_win64.exe"
+    mac: "supertux_mac.dmg"
+    linux_32: ~
+    linux_64: ~
+    name: "Supertux"
+    description: "C'hoari savenn evel Super Mario"
+    image: "supertux.png"
+  supertuxkart:
+    win_32: "supertuxkart_win32.exe"
+    win_64: "supertuxkart_win64.exe"
+    mac: "supertuxkart_mac.dmg"
+    linux_32: ~
+    linux_64: ~
+    name: "SuperTuxKart"
+    description: "C'hoari karrigoù evel Mario Kart"
+    image: "supertuxkart.png"
+
+arloadou:
+  1_firefox:
+    android: "https://play.google.com/store/apps/details?id=org.mozilla.firefox"
+    ios: "https://itunes.apple.com/us/app/firefox-web-browser/id989804926"
+    name: "Firefox"
+    description: "Merdeer web"
+    image: "firefox.png"
+  2_wikipedia:
+    android: "https://play.google.com/store/apps/details?id=org.wikipedia&hl=en_US"
+    ios: "https://itunes.apple.com/us/app/wikipedia/id324715238"
+    name: "Wikipedia"
+    description: "An holloueziadur frank"
+    image: "wikipedia.png"
+  3_swiftkey:
+    android: "https://play.google.com/store/apps/details?id=com.touchtype.swiftkey&hl=en_US"
+    ios: "https://itunes.apple.com/us/app/swiftkey-keyboard/id911813648"
+    name: SwiftKey
+    description: "Klavier brezhonek"
+    image: "swiftkey.png"
+  4_qwant:
+    android: "https://play.google.com/store/apps/details?id=com.qwant.liberty&hl=fr"
+    ios: "https://itunes.apple.com/us/app/qwant/id924470452"
+    name: Qwant
+    description: "Lusker enklask doujus"
+    image: "qwant.png"
+  5_vanilla:
+    android: "https://play.google.com/store/apps/details?id=ch.blinkenlights.android.vanilla&hl=en_US"
+    ios: ~
+    name: "Vanilla Music"
+    description: "Lenner sonerezh"
+    image: "vanilla.png"
+  6_k9:
+    android: "https://play.google.com/store/apps/details?id=com.fsck.k9&hl=en"
+    ios: ~
+    name: "K-9 Mail"
+    description: "Lenner posteloù"
+    image: "k9.png"
+  7_osmand:
+    android: "https://play.google.com/store/apps/details?id=net.osmand&hl=en_US"
+    ios: "https://itunes.apple.com/us/app/osmand-maps-travel-navigate/id934850257"
+    name: "OsmAnd"
+    description: "Arload GPS gant ur gartenn e brezhoneg"
+    image: "osmand.png"
+  
 
 hunspell:
   libreoffice:

@@ -6,7 +6,7 @@
     </div>
     <div class="row">
             <div class="col-md-12">
-                {% for key, softwareEntry in data.software %}
+                {% for key, softwareEntry in data.choariou %}
                     <div class="row software-entry">
                         <div class="col-md-1">
                             <img src="/static/images/logo/{{softwareEntry.image}}" width=64" />

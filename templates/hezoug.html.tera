@@ -2,38 +2,32 @@
 {% import "macros" as macros %}
 {% block content %}
     <div class="row">
-        <div class="col-md-12"><h1>Meziantoù</h1></div>
+        <div class="col-md-12"><h1>Arloadoù hezoug</h1></div>
     </div>
     <div class="row">
             <div class="col-md-12">
-                {% for key, softwareEntry in data.software %}
+                {% for key, arloadEntry in data.arloadou %}
                     <div class="row software-entry">
                         <div class="col-md-1">
-                            <img src="/static/images/logo/{{softwareEntry.image}}" width=64" />
+                            <img src="/static/images/logo/{{arloadEntry.image}}" width=64" />
                         </div>
                         <div class="col-md-11">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <h4>{{softwareEntry.name}}</h4>
-                                            <span class="subtitle">{{softwareEntry.description}}</span>
+                                            <h4>{{arloadEntry.name}}</h4>
+                                            <span class="subtitle">{{arloadEntry.description}}</span>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            {% set platform = "win_64"%}
-                                            {%if system == 'Mac' and softwareEntry.mac%}
-                                                {% set platform = "mac"%}
-                                            {% elif system =='Linux' and softwareEntry.linux_64%}
-                                                {% set platform = "linux_64"%}
-                                            {% elif system =='Linux' and softwareEntry.linux_32%}
-                                                {% set platform = "linux_32"%}
-                                            {% elif not softwareEntry.win_64%}
-                                                {% set platform = "win_32"%}
+                                            {% set platform = "android"%}
+                                            {%if system == 'iPhone' and arloadEntry.ios%}
+                                                {% set platform = "ios"%}
                                             {% endif %}
 
-                                            <a class = "btn btn-primary" href="/static/builds/{{softwareEntry[platform]}}">Pellgargañ war {{macros::trans_system(code=platform)}}</a>
+                                            <a class = "btn btn-primary" href="/static/builds/{{arloadEntry[platform]}}">Pellgargañ war {{macros::trans_system(code=platform)}}</a>
 
                                         </div>
                                     </div>
@@ -48,10 +42,10 @@
 
                                     <div class="row">
                                         <div class="col-md-12">
-                                            {%set platforms = [ 'win_64', 'win_32', 'mac','linux_32', 'linux_64' ] %}
+                                            {%set platforms = [ 'android', 'ios' ] %}
                                             {%for platform in platforms %}
-                                                {%if softwareEntry[platform]%}
-                                                    <a href="/static/builds/{{softwareEntry[platform]}}">{{macros::trans_system(code=platform, archi=true)}}</a>
+                                                {%if arloadEntry[platform]%}
+                                                    <a href="/static/builds/{{arloadEntry[platform]}}">{{macros::trans_system(code=platform, archi=true)}}</a>
                                                     {%if not loop.last %} | {%endif%}
                                                 {%endif%}
                                             {%endfor%}
