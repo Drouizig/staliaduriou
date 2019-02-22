@@ -22,18 +22,19 @@
 
                     </div>
                 </div>
-                <h2>Ostilhoù enlinenn</h2>
-                <div class="row">
-                    <div class="col-md-12">
-                        <ul>
-                            <li><a href="https://www.openstreetmap.bzh/">OpenStreetMap.bzh</a></li>
-                            <li><a href="https://voice.mozilla.org/br">Mozilla Common Voice</a></li>
-                            <li><a href="https://www.qwant.com/?l=br&r=FR&sr=br">Qwant</a></li>
-                    </div>
-                </div>
+
             </div>
             <div class="row">
                 <div class="col-md-12">
+                  <h2>Ostilhoù enlinenn</h2>
+                  <div class="row">
+                      <div class="col-md-12">
+                          <ul>
+                              <li><a href="https://www.openstreetmap.bzh/">OpenStreetMap.bzh</a></li>
+                              <li><a href="https://voice.mozilla.org/br">Mozilla Common Voice</a></li>
+                              <li><a href="https://www.qwant.com/?l=br&r=FR&sr=br">Qwant</a></li>
+                      </div>
+                  </div>
                     <h2>Klavier C'hwerty</h2>
                     <a href="http://www.drouizig.org/index.php/br/binviou-br/klavier-c-hwerty-ha-sturiou/168-kit-de-conversion-azertyqwerty-g-chwerty">
                         Prenañ ur follenad pegsunioù C'hwerty
@@ -43,4 +44,3 @@
         </div>
     </div>
 {% endblock %}
-
