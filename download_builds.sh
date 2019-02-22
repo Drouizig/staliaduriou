@@ -35,8 +35,10 @@ wget "https://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/0.9.3/sup
 wget "https://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/0.9.3/supertuxkart-0.9.3-win32.exe/download" -O static/builds/supertuxkart_win32.exe
 wget "https://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/0.9.3/SuperTuxKart-0.9.3-osx.dmg/download" -O static/builds/supertuxkart_mac.dmg
 
-# Difazier Hunspell
+# Difazier
 wget "https://extensions.libreoffice.org/extensions/an-drouizig-breton-spellchecker/0.16/@@download/file/difazier-an-drouizig-0.16.oxt" -O static/builds/difazier_libreoffice.oxt
+wget "https://languagetool.org/download/LanguageTool-4.4.1.oxt" -O static/builds/languagetool_libreoffice.oxt
+wget "https://addons.mozilla.org/firefox/downloads/file/1689625/difazier_an_drouizig-0.16.xpi" -O static/builds/difazier_firefox.xpi
 
 # An Drouizig Difazier
 wget "http://www.drouizig.org/images/stories/difazier/win/pakadaou/breton_spellchecker_m41_2016_x86_win32.msi" -O static/builds/difazier_office1619_32.msi

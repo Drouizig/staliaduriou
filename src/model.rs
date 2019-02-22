@@ -13,6 +13,14 @@ struct Software {
 }
 
 #[derive(Deserialize, Serialize, Debug)]
+struct ChoariPaeus {
+    link: Option<String>,
+    name: Option<String>,
+    description: Option<String>,
+    image: Option<String>
+}
+
+#[derive(Deserialize, Serialize, Debug)]
 struct Arload {
     android: Option<String>,
     ios: Option<String>,
@@ -23,8 +31,10 @@ struct Arload {
 
 #[derive(Deserialize, Serialize, Debug)]
 struct Hunspell {
-    oxt: Option<String>,
-    name: Option<String>
+    file: Option<String>,
+    name: Option<String>,
+    description: Option<String>,
+    image: Option<String>
 }
 
 
@@ -39,6 +49,7 @@ struct Difazier {
 pub struct StaliadurData {
     software: BTreeMap<String, Software>,
     choariou: BTreeMap<String, Software>,
+    choariou_paeus: BTreeMap<String, ChoariPaeus>,
     arloadou: BTreeMap<String, Arload>,
     hunspell: BTreeMap<String, Hunspell>,
     difazier: BTreeMap<String, Difazier>,

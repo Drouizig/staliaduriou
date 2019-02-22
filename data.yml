@@ -65,6 +65,18 @@ choariou:
     description: "C'hoari karrigoù evel Mario Kart"
     image: "supertuxkart.png"
 
+choariou_paeus:
+  minecraft:
+    name: "Minecraft"
+    description: "Ar c'hoari hollvrudet"
+    link: "https://minecraft.net"
+    image: "minecraft.jpg"
+  sterdenn:
+    name: "Sterdenn"
+    description: "Ur Shoot 'em Up Roazhonat"
+    link: "http://steredenn.pixelnest.io/"
+    image: "steredenn.png"
+
 arloadou:
   1_firefox:
     android: "https://play.google.com/store/apps/details?id=org.mozilla.firefox"
@@ -111,24 +123,37 @@ arloadou:
   
 
 hunspell:
-  libreoffice:
-    oxt: "difazier_libreoffice.oxt"
-    name: "Difazier Hunspell evit libreoffice"
+  1_libreoffice:
+    file: "difazier_libreoffice.oxt"
+    name: "Hunspell evit LibreOffice"
+    description: "Difazier reizhskrivadurel"
+    image: "libreoffice.png"
+  2_firefox:
+    file: "difazier_firefox.xpi"
+    name: "Hunspell evit Firefox ha Thunderbird"
+    description: "Difazier reizhskrivadurel"
+    image: "firefox.png"
+  3_languagetool:
+    file: "languagetool_libreoffice.oxt"
+    name: "LanguageTool evit LibreOffice"
+    description: "Difazier yezhadurel"
+    image: "languagetool.png"
+  
 
 difazier:
-  version_1619:
+  1_version_1619:
     win_64: "builds/difazier_office1619_64.exe"
     win_32: "builds/difazier_office1619_32.msi"
     name: "Microsoft Office 2016/2019"
-  version_13:
+  2_version_13:
     win_64: "builds/difazier_office13_64.exe"
     win_32: "builds/difazier_office13_32.msi"
     name: "Microsoft Office 2013"
-  version_10:
+  3_version_10:
     win_64: "builds/difazier_office10_64.exe"
     win_32: "builds/difazier_office10_32.msi"
     name: "Microsoft Office 2010"
-  version_0007:
+  4_version_0007:
     win_64: ~
     win_32: "builds/difazier_office0007.msi"
     name: "Microsoft Office 2000, 2002, 2003, 2007"

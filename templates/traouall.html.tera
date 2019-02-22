@@ -2,66 +2,44 @@
 {% import "macros" as macros %}
 {% block content %}
     <div class="row">
-        <div class="col-md-12"><h1>Meziantoù</h1></div>
+        <div class="col-md-12"><h1>Traoù all</h1></div>
     </div>
     <div class="row">
             <div class="col-md-12">
-                {% for key, softwareEntry in data.choariou %}
-                    <div class="row software-entry">
-                        <div class="col-md-1">
-                            <img src="/static/images/logo/{{softwareEntry.image}}" width=64" />
-                        </div>
-                        <div class="col-md-11">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <h4>{{softwareEntry.name}}</h4>
-                                            <span class="subtitle">{{softwareEntry.description}}</span>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            {% set platform = "win_64"%}
-                                            {%if system == 'Mac' and softwareEntry.mac%}
-                                                {% set platform = "mac"%}
-                                            {% elif system =='Linux' and softwareEntry.linux_64%}
-                                                {% set platform = "linux_64"%}
-                                            {% elif system =='Linux' and softwareEntry.linux_32%}
-                                                {% set platform = "linux_32"%}
-                                            {% elif not softwareEntry.win_64%}
-                                                {% set platform = "win_32"%}
-                                            {% endif %}
+                <div class="row software-entry">
+                    <div class="col-md-12">
+                        <p><a class="btn btn-primary" href="/static/bookmarks_bedniverel.html" download>Pellgargañ ar roll sinedoù</a></p>
+                        <p>
+                            <a href="https://support.mozilla.org/fr/kb/importer-marque-pages-fichier-html">
+                                Skoazell evit enporzhiañ ar sinedoù war Firefox (e galleg)
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://support.google.com/chrome/answer/96816?hl=fr">
+                                Skoazell evit enporzhiañ ar sinedoù war Google Chrome (e galleg)
+                            </a>
+                        </p>
 
-                                            <a class = "btn btn-primary" href="/static/builds/{{softwareEntry[platform]}}">Pellgargañ war {{macros::trans_system(code=platform)}}</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            An holl bellgargadennoù :
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            {%set platforms = [ 'win_64', 'win_32', 'mac','linux_32', 'linux_64' ] %}
-                                            {%for platform in platforms %}
-                                                {%if softwareEntry[platform]%}
-                                                    <a href="/static/builds/{{softwareEntry[platform]}}">{{macros::trans_system(code=platform, archi=true)}}</a>
-                                                    {%if not loop.last %} | {%endif%}
-                                                {%endif%}
-                                            {%endfor%}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                {% endfor %}
+                </div>
+                <h2>Ostilhoù enlinenn</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul>
+                            <li><a href="https://www.openstreetmap.bzh/">OpenStreetMap.bzh</a></li>
+                            <li><a href="https://voice.mozilla.org/br">Mozilla Common Voice</a></li>
+                            <li><a href="https://www.qwant.com/?l=br&r=FR&sr=br">Qwant</a></li>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Klavier C'hwerty</h2>
+                    <a href="http://www.drouizig.org/index.php/br/binviou-br/klavier-c-hwerty-ha-sturiou/168-kit-de-conversion-azertyqwerty-g-chwerty">
+                        Prenañ ur follenad pegsunioù C'hwerty
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}

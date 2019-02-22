@@ -2,10 +2,15 @@
 {% import "macros" as macros %}
 {% block content %}
     <div class="row">
-        <div class="col-md-12"><h1>Meziantoù</h1></div>
+        <div class="col-md-12"><h1>C'hoarioù</h1></div>
     </div>
     <div class="row">
             <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Digoust ha frank</h2>
+                    </div>
+                </div>
                 {% for key, softwareEntry in data.choariou %}
                     <div class="row software-entry">
                         <div class="col-md-1">
@@ -55,6 +60,36 @@
                                                     {%if not loop.last %} | {%endif%}
                                                 {%endif%}
                                             {%endfor%}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Kenwerzhel ha paeus</h2>
+                    </div>
+                </div>
+                {% for key, choariEntry in data.choariou_paeus %}
+                    <div class="row software-entry">
+                        <div class="col-md-1">
+                            <img src="/static/images/logo/{{choariEntry.image}}" width=64" />
+                        </div>
+                        <div class="col-md-11">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4>{{choariEntry.name}}</h4>
+                                            <span class="subtitle">{{choariEntry.description}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <a class = "btn btn-primary" href="{{choariEntry.link}}">Prenañ war al lec'hienn</a>
+
                                         </div>
                                     </div>
                                 </div>

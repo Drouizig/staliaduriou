@@ -27,7 +27,7 @@
                                                 {% set platform = "ios"%}
                                             {% endif %}
 
-                                            <a class = "btn btn-primary" href="/static/builds/{{arloadEntry[platform]}}">Pellgargañ war {{macros::trans_system(code=platform)}}</a>
+                                            <a class = "btn btn-primary" href="{{arloadEntry[platform]}}">Pellgargañ war {{macros::trans_system(code=platform)}}</a>
 
                                         </div>
                                     </div>
@@ -45,7 +45,7 @@
                                             {%set platforms = [ 'android', 'ios' ] %}
                                             {%for platform in platforms %}
                                                 {%if arloadEntry[platform]%}
-                                                    <a href="/static/builds/{{arloadEntry[platform]}}">{{macros::trans_system(code=platform, archi=true)}}</a>
+                                                    <a href="{{arloadEntry[platform]}}">{{macros::trans_system(code=platform, archi=true)}}</a>
                                                     {%if not loop.last %} | {%endif%}
                                                 {%endif%}
                                             {%endfor%}
