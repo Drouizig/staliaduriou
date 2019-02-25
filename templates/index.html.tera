@@ -16,7 +16,7 @@
                                 <div class="col-md-6">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <h4>{{softwareEntry.name}}</h4>
+                                            <h4><a href="{{softwareEntry.website}}">{{softwareEntry.name}}</a></h4>
                                             <span class="subtitle">{{softwareEntry.description}}</span>
                                         </div>
                                     </div>
@@ -33,8 +33,9 @@
                                                 {% set platform = "win_32"%}
                                             {% endif %}
 
-                                            <a class = "btn btn-primary" href="/static/builds/{{softwareEntry[platform]}}">Pellgargañ war {{macros::trans_system(code=platform)}}</a>
-
+                                            {%if softwareEntry[platform]%}
+                                                <a class = "btn btn-primary" href="/static/builds/{{softwareEntry[platform]}}">Pellgargañ war {{macros::trans_system(code=platform)}}</a>
+                                            {%endif%}
                                         </div>
                                     </div>
                                 </div>

@@ -9,7 +9,8 @@ struct Software {
     linux_64: Option<String>,
     name: Option<String>,
     description: Option<String>,
-    image: Option<String>
+    image: Option<String>,
+    website: Option<String>
 }
 
 #[derive(Deserialize, Serialize, Debug)]

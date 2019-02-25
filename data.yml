@@ -1,5 +1,5 @@
 software:
-  1_firefox:
+  01_firefox:
     win_32: "firefox_win32.exe"
     win_64: "firefox_win64.exe"
     mac: "firefox_mac.dmg"
@@ -8,7 +8,8 @@ software:
     name: "Firefox"
     description: "Merdeer web"
     image: "firefox.png"
-  2_thunderbird:
+    website: "https://www.mozilla.org/fr/firefox/all/#br"
+  02_thunderbird:
     win_32: "thunderbird_win.exe"
     win_64: ~
     mac: "thunderbird_mac.dmg"
@@ -17,7 +18,8 @@ software:
     name: "Thunderbird"
     description: "Lenner posteloù"
     image: "thunderbird.png"
-  3_libreoffice:
+    website: "https://www.thunderbird.net/br/"
+  03_libreoffice:
     win_32: "libreoffice_win32.msi"
     win_64: "libreoffice_win64.msi"
     mac: "libreoffice_mac.dmg"
@@ -26,7 +28,8 @@ software:
     name: "LibreOffice"
     description: "Heuliad burevek"
     image: "libreoffice.png"
-  4_clementine:
+    website: "https://www.libreoffice.org/"
+  04_clementine:
     win_32: "clementine_win.exe"
     win_64: ~
     mac: "clementine_mac.dmg"
@@ -35,7 +38,8 @@ software:
     name: "Clementine"
     description: "Lenner sonerezh"
     image: "clementine.png"
-  5_gimp:
+    website: "https://www.clementine-player.org/"
+  05_gimp:
     win_32: "gimp_windows.exe"
     win_64: ~
     mac: "gimp_mac.dmg"
@@ -44,6 +48,79 @@ software:
     name: "Gimp"
     description: "Embanner skeudennoù"
     image: "gimp.gif"
+    website: "http://gimp.org/"
+  07_openshot:
+    win_32: ~
+    win_64: ~
+    mac: ~
+    linux_32: ~
+    linux_64: ~
+    name: "Openshot"
+    description: "Embanner videoioù"
+    image: "openshot.jpg"
+    website: "http://openshot.org/"
+  08_homebank:
+    win_32: ~
+    win_64: ~
+    mac: ~
+    linux_32: ~
+    linux_64: ~
+    name: "Homebank"
+    description: "Merañ ar c'hontoù"
+    image: "homebank.jpg"
+    website: "http://homebank.free.fr/"
+  09_vlc:
+    win_32: ~
+    win_64: ~
+    mac: ~
+    linux_32: ~
+    linux_64: ~
+    name: "VLC"
+    description: "Lenner videoioù"
+    image: "vlc.png"
+    website: "https://www.videolan.org/vlc/index.html"
+  10_tuxpaint:
+    win_32: ~
+    win_64: ~
+    mac: ~
+    linux_32: ~
+    linux_64: ~
+    name: "TuxPaint"
+    description: "Tresañ evit ar vugale"
+    image: "tuxpaint.png"
+    website: "http://tuxpaint.org/"
+  11_pinta:
+    win_32: ~
+    win_64: ~
+    mac: ~
+    linux_32: ~
+    linux_64: ~
+    name: "Pinta"
+    description: "Embanner skeudennoù"
+    image: "pinta.png"
+    website: "https://pinta-project.com/pintaproject/pinta/"
+  12_inkscape:
+    win_32: ~
+    win_64: ~
+    mac: ~
+    linux_32: ~
+    linux_64: ~
+    name: "Inkscape"
+    description: "Embanner skeudennoù SVG"
+    image: "inkscape.png"
+    website: "https://inkscape.org/"
+  13_scribus:
+    win_32: ~
+    win_64: ~
+    mac: ~
+    linux_32: ~
+    linux_64: ~
+    name: "Scribus"
+    description: "Aozer pajennoù"
+    image: "scribus.png"
+    website: "https://www.scribus.net/"
+
+
 
 choariou:
   supertux:
@@ -55,6 +132,7 @@ choariou:
     name: "Supertux"
     description: "C'hoari savenn evel Super Mario"
     image: "supertux.png"
+    website: "https://www.supertux.org/"
   supertuxkart:
     win_32: "supertuxkart_win32.exe"
     win_64: "supertuxkart_win64.exe"
@@ -64,6 +142,7 @@ choariou:
     name: "SuperTuxKart"
     description: "C'hoari karrigoù evel Mario Kart"
     image: "supertuxkart.png"
+    website: "https://supertuxkart.net/Main_Page"
 
 choariou_paeus:
   minecraft:
@@ -142,18 +221,18 @@ hunspell:
 
 difazier:
   1_version_1619:
-    win_64: "builds/difazier_office1619_64.exe"
-    win_32: "builds/difazier_office1619_32.msi"
+    win_64: "difazier_office1619_64.exe"
+    win_32: "difazier_office1619_32.msi"
     name: "Microsoft Office 2016/2019"
   2_version_13:
-    win_64: "builds/difazier_office13_64.exe"
-    win_32: "builds/difazier_office13_32.msi"
+    win_64: "difazier_office13_64.exe"
+    win_32: "difazier_office13_32.msi"
     name: "Microsoft Office 2013"
   3_version_10:
-    win_64: "builds/difazier_office10_64.exe"
-    win_32: "builds/difazier_office10_32.msi"
+    win_64: "difazier_office10_64.exe"
+    win_32: "difazier_office10_32.msi"
     name: "Microsoft Office 2010"
   4_version_0007:
     win_64: ~
-    win_32: "builds/difazier_office0007.msi"
+    win_32: "difazier_office0007.msi"
     name: "Microsoft Office 2000, 2002, 2003, 2007"
