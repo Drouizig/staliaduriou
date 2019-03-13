@@ -123,7 +123,7 @@ software:
 
 
 choariou:
-  supertux:
+  1_supertux:
     win_32: "supertux_win32.exe"
     win_64: "supertux_win64.exe"
     mac: "supertux_mac.dmg"
@@ -133,7 +133,7 @@ choariou:
     description: "C'hoari savenn evel Super Mario"
     image: "supertux.png"
     website: "https://www.supertux.org/"
-  supertuxkart:
+  2_supertuxkart:
     win_32: "supertuxkart_win32.exe"
     win_64: "supertuxkart_win64.exe"
     mac: "supertuxkart_mac.dmg"
@@ -143,7 +143,16 @@ choariou:
     description: "C'hoari karrigoù evel Mario Kart"
     image: "supertuxkart.png"
     website: "https://supertuxkart.net/Main_Page"
-
+  3_freeciv:
+    win_32: "freeciv_win32.exe"
+    win_64: ~
+    mac: ~
+    linux_32: ~
+    linux_64: ~
+    name: "FreeCiv"
+    description: "C'hoari strategiezh tro-dre-dro"
+    image: "freeciv.png"
+    website: "http://freeciv.org"
 choariou_paeus:
   minecraft:
     name: "Minecraft"
