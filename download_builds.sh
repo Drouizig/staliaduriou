@@ -13,9 +13,9 @@ wget "https://download.mozilla.org/?product=thunderbird-60.5.1-SSL&os=win&lang=b
 wget "https://download.mozilla.org/?product=thunderbird-60.5.1-SSL&os=osx&lang=br" -O static/builds/thunderbird_mac.dmg
 
 # Libreoffice
-wget "https://www.libreoffice.org/donate/dl/win-x86_64/6.2.0/br/LibreOffice_6.2.0_Win_x64.msi" -O static/builds/libreoffice_win64.msi
-wget "https://www.libreoffice.org/donate/dl/win-x86/6.2.0/br/LibreOffice_6.2.0_Win_x86.msi" -O static/builds/libreoffice_win32.msi
-wget "https://www.libreoffice.org/donate/dl/mac-x86_64/6.2.0/br/LibreOffice_6.2.0_MacOS_x86-64.dmg" -O static/builds/libreoffice_mac.dmg
+wget "http://mirror.in2p3.fr/ftp/tdf/libreoffice/stable/6.2.0/win/x86_64/LibreOffice_6.2.0_Win_x64.msi" -O static/builds/libreoffice_win64.msi
+wget "http://mirror6.layerjet.com/tdf/libreoffice/stable/6.2.0/win/x86/LibreOffice_6.2.0_Win_x86.msi" -O static/builds/libreoffice_win32.msi
+wget "https://mirror.ibcp.fr/pub/tdf/libreoffice/stable/6.2.0/mac/x86_64/LibreOffice_6.2.0_MacOS_x86-64.dmg" -O static/builds/libreoffice_mac.dmg
 
 # Clementine
 wget "https://github.com/clementine-player/Clementine/releases/download/1.3.1/ClementineSetup-1.3.1.exe" -O static/builds/clementine_win.exe
@@ -34,6 +34,10 @@ wget "https://github.com/SuperTux/supertux/releases/download/v0.6.0/SuperTux-v0.
 wget "https://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/0.9.3/supertuxkart-0.9.3-win64.exe/download" -O static/builds/supertuxkart_win64.exe
 wget "https://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/0.9.3/supertuxkart-0.9.3-win32.exe/download" -O static/builds/supertuxkart_win32.exe
 wget "https://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/0.9.3/SuperTuxKart-0.9.3-osx.dmg/download" -O static/builds/supertuxkart_mac.dmg
+
+#Freeciv
+wget "http://files.freeciv.org/packages/windows/Freeciv-2.6.0-win32-gtk3-setup.exe" -O static/builds/freeciv_win32.exe
+
 
 # Difazier
 wget "https://extensions.libreoffice.org/extensions/an-drouizig-breton-spellchecker/0.16/@@download/file/difazier-an-drouizig-0.16.oxt" -O static/builds/difazier_libreoffice.oxt
