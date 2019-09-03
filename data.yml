@@ -1,0 +1,247 @@
+software:
+  01_firefox:
+    win_32: "firefox_win32.exe"
+    win_64: "firefox_win64.exe"
+    mac: "firefox_mac.dmg"
+    linux_32: "firefox_linux32.tar.bz2"
+    linux_64: "firefox_linux64.tar.bz2"
+    name: "Firefox"
+    description: "Merdeer web"
+    image: "firefox.png"
+    website: "https://www.mozilla.org/fr/firefox/all/#br"
+  02_thunderbird:
+    win_32: "thunderbird_win.exe"
+    win_64: ~
+    mac: "thunderbird_mac.dmg"
+    linux_32: ~
+    linux_64: ~
+    name: "Thunderbird"
+    description: "Lenner posteloù"
+    image: "thunderbird.png"
+    website: "https://www.thunderbird.net/br/"
+  03_libreoffice:
+    win_32: "libreoffice_win32.msi"
+    win_64: "libreoffice_win64.msi"
+    mac: "libreoffice_mac.dmg"
+    linux_32: ~
+    linux_64: ~
+    name: "LibreOffice"
+    description: "Heuliad burevek"
+    image: "libreoffice.png"
+    website: "https://www.libreoffice.org/"
+  04_clementine:
+    win_32: "clementine_win.exe"
+    win_64: ~
+    mac: "clementine_mac.dmg"
+    linux_32: ~
+    linux_64: ~
+    name: "Clementine"
+    description: "Lenner sonerezh"
+    image: "clementine.png"
+    website: "https://www.clementine-player.org/"
+  05_gimp:
+    win_32: "gimp_windows.exe"
+    win_64: ~
+    mac: "gimp_mac.dmg"
+    linux_32: ~
+    linux_64: ~
+    name: "Gimp"
+    description: "Embanner skeudennoù"
+    image: "gimp.gif"
+    website: "http://gimp.org/"
+  07_openshot:
+    win_32: ~
+    win_64: ~
+    mac: ~
+    linux_32: ~
+    linux_64: ~
+    name: "Openshot"
+    description: "Embanner videoioù"
+    image: "openshot.jpg"
+    website: "http://openshot.org/"
+  08_homebank:
+    win_32: ~
+    win_64: ~
+    mac: ~
+    linux_32: ~
+    linux_64: ~
+    name: "Homebank"
+    description: "Merañ ar c'hontoù"
+    image: "homebank.jpg"
+    website: "http://homebank.free.fr/"
+  09_vlc:
+    win_32: ~
+    win_64: ~
+    mac: ~
+    linux_32: ~
+    linux_64: ~
+    name: "VLC"
+    description: "Lenner videoioù"
+    image: "vlc.png"
+    website: "https://www.videolan.org/vlc/index.html"
+  10_tuxpaint:
+    win_32: ~
+    win_64: ~
+    mac: ~
+    linux_32: ~
+    linux_64: ~
+    name: "TuxPaint"
+    description: "Tresañ evit ar vugale"
+    image: "tuxpaint.png"
+    website: "http://tuxpaint.org/"
+  11_pinta:
+    win_32: ~
+    win_64: ~
+    mac: ~
+    linux_32: ~
+    linux_64: ~
+    name: "Pinta"
+    description: "Embanner skeudennoù"
+    image: "pinta.png"
+    website: "https://pinta-project.com/pintaproject/pinta/"
+  12_inkscape:
+    win_32: ~
+    win_64: ~
+    mac: ~
+    linux_32: ~
+    linux_64: ~
+    name: "Inkscape"
+    description: "Embanner skeudennoù SVG"
+    image: "inkscape.png"
+    website: "https://inkscape.org/"
+  13_scribus:
+    win_32: ~
+    win_64: ~
+    mac: ~
+    linux_32: ~
+    linux_64: ~
+    name: "Scribus"
+    description: "Aozer pajennoù"
+    image: "scribus.png"
+    website: "https://www.scribus.net/"
+
+
+
+choariou:
+  1_supertux:
+    win_32: "supertux_win32.exe"
+    win_64: "supertux_win64.exe"
+    mac: "supertux_mac.dmg"
+    linux_32: ~
+    linux_64: ~
+    name: "Supertux"
+    description: "C'hoari savenn evel Super Mario"
+    image: "supertux.png"
+    website: "https://www.supertux.org/"
+  2_supertuxkart:
+    win_32: "supertuxkart_win32.exe"
+    win_64: "supertuxkart_win64.exe"
+    mac: "supertuxkart_mac.dmg"
+    linux_32: ~
+    linux_64: ~
+    name: "SuperTuxKart"
+    description: "C'hoari karrigoù evel Mario Kart"
+    image: "supertuxkart.png"
+    website: "https://supertuxkart.net/Main_Page"
+  3_freeciv:
+    win_32: "freeciv_win32.exe"
+    win_64: ~
+    mac: ~
+    linux_32: ~
+    linux_64: ~
+    name: "FreeCiv"
+    description: "C'hoari strategiezh tro-dre-dro"
+    image: "freeciv.png"
+    website: "http://freeciv.org"
+choariou_paeus:
+  minecraft:
+    name: "Minecraft"
+    description: "Ar c'hoari hollvrudet"
+    link: "https://minecraft.net"
+    image: "minecraft.jpg"
+  sterdenn:
+    name: "Sterdenn"
+    description: "Ur Shoot 'em Up Roazhonat"
+    link: "http://steredenn.pixelnest.io/"
+    image: "steredenn.png"
+
+arloadou:
+  1_firefox:
+    android: "https://play.google.com/store/apps/details?id=org.mozilla.firefox"
+    ios: "https://itunes.apple.com/us/app/firefox-web-browser/id989804926"
+    name: "Firefox"
+    description: "Merdeer web"
+    image: "firefox.png"
+  2_wikipedia:
+    android: "https://play.google.com/store/apps/details?id=org.wikipedia&hl=en_US"
+    ios: "https://itunes.apple.com/us/app/wikipedia/id324715238"
+    name: "Wikipedia"
+    description: "An holloueziadur frank"
+    image: "wikipedia.png"
+  3_swiftkey:
+    android: "https://play.google.com/store/apps/details?id=com.touchtype.swiftkey&hl=en_US"
+    ios: "https://itunes.apple.com/us/app/swiftkey-keyboard/id911813648"
+    name: SwiftKey
+    description: "Klavier brezhonek"
+    image: "swiftkey.png"
+  4_qwant:
+    android: "https://play.google.com/store/apps/details?id=com.qwant.liberty&hl=fr"
+    ios: "https://itunes.apple.com/us/app/qwant/id924470452"
+    name: Qwant
+    description: "Lusker enklask doujus"
+    image: "qwant.png"
+  5_vanilla:
+    android: "https://play.google.com/store/apps/details?id=ch.blinkenlights.android.vanilla&hl=en_US"
+    ios: ~
+    name: "Vanilla Music"
+    description: "Lenner sonerezh"
+    image: "vanilla.png"
+  6_k9:
+    android: "https://play.google.com/store/apps/details?id=com.fsck.k9&hl=en"
+    ios: ~
+    name: "K-9 Mail"
+    description: "Lenner posteloù"
+    image: "k9.png"
+  7_osmand:
+    android: "https://play.google.com/store/apps/details?id=net.osmand&hl=en_US"
+    ios: "https://itunes.apple.com/us/app/osmand-maps-travel-navigate/id934850257"
+    name: "OsmAnd"
+    description: "Arload GPS gant ur gartenn e brezhoneg"
+    image: "osmand.png"
+  
+
+hunspell:
+  1_libreoffice:
+    file: "difazier_libreoffice.oxt"
+    name: "Hunspell evit LibreOffice"
+    description: "Difazier reizhskrivadurel"
+    image: "libreoffice.png"
+  2_firefox:
+    file: "difazier_firefox.xpi"
+    name: "Hunspell evit Firefox ha Thunderbird"
+    description: "Difazier reizhskrivadurel"
+    image: "firefox.png"
+  3_languagetool:
+    file: "languagetool_libreoffice.oxt"
+    name: "LanguageTool evit LibreOffice"
+    description: "Difazier yezhadurel"
+    image: "languagetool.png"
+  
+
+difazier:
+  1_version_1619:
+    win_64: "difazier_office1619_64.exe"
+    win_32: "difazier_office1619_32.msi"
+    name: "Microsoft Office 2016/2019"
+  2_version_13:
+    win_64: "difazier_office13_64.exe"
+    win_32: "difazier_office13_32.msi"
+    name: "Microsoft Office 2013"
+  3_version_10:
+    win_64: "difazier_office10_64.exe"
+    win_32: "difazier_office10_32.msi"
+    name: "Microsoft Office 2010"
+  4_version_0007:
+    win_64: ~
+    win_32: "difazier_office0007.msi"
+    name: "Microsoft Office 2000, 2002, 2003, 2007"

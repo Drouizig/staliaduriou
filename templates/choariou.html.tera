@@ -1,0 +1,103 @@
+{% extends "base" %}
+{% import "macros" as macros %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-12"><h1>C'hoarioù</h1></div>
+    </div>
+    <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Digoust ha frank</h2>
+                    </div>
+                </div>
+                {% for key, softwareEntry in data.choariou %}
+                    <div class="row software-entry">
+                        <div class="col-md-1">
+                            <img src="/static/images/logo/{{softwareEntry.image}}" width=64" />
+                        </div>
+                        <div class="col-md-11">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4><a href="{{softwareEntry.website}}">{{softwareEntry.name}}</a></h4>
+                                            <span class="subtitle">{{softwareEntry.description}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            {% set platform = "win_64"%}
+                                            {%if system == 'Mac' and softwareEntry.mac%}
+                                                {% set platform = "mac"%}
+                                            {% elif system =='Linux' and softwareEntry.linux_64%}
+                                                {% set platform = "linux_64"%}
+                                            {% elif system =='Linux' and softwareEntry.linux_32%}
+                                                {% set platform = "linux_32"%}
+                                            {% elif not softwareEntry.win_64%}
+                                                {% set platform = "win_32"%}
+                                            {% endif %}
+
+                                            <a class = "btn btn-primary" href="/static/builds/{{softwareEntry[platform]}}">Pellgargañ war {{macros::trans_system(code=platform)}}</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            An holl bellgargadennoù :
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            {%set platforms = [ 'win_64', 'win_32', 'mac','linux_32', 'linux_64' ] %}
+                                            {%for platform in platforms %}
+                                                {%if softwareEntry[platform]%}
+                                                    <a href="/static/builds/{{softwareEntry[platform]}}">{{macros::trans_system(code=platform, archi=true)}}</a>
+                                                    {%if not loop.last %} | {%endif%}
+                                                {%endif%}
+                                            {%endfor%}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Kenwerzhel ha paeus</h2>
+                    </div>
+                </div>
+                {% for key, choariEntry in data.choariou_paeus %}
+                    <div class="row software-entry">
+                        <div class="col-md-1">
+                            <img src="/static/images/logo/{{choariEntry.image}}" width=64" />
+                        </div>
+                        <div class="col-md-11">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4>{{choariEntry.name}}</h4>
+                                            <span class="subtitle">{{choariEntry.description}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <a class = "btn btn-primary" href="{{choariEntry.link}}">Prenañ war al lec'hienn</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+

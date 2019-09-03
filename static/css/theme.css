@@ -1,0 +1,12 @@
+.software-entry {
+    padding: 10px;
+    border: solid 1px black;
+}
+
+.software-entry h4 {
+    display: inline-block;
+} 
+
+.software-entry span.subtitle{
+    font-style: italic;
+}
