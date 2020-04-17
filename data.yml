@@ -1,18 +1,18 @@
 software:
   01_firefox:
-    win_32: "firefox_win32.exe"
-    win_64: "firefox_win64.exe"
-    mac: "firefox_mac.dmg"
-    linux_32: "firefox_linux32.tar.bz2"
-    linux_64: "firefox_linux64.tar.bz2"
+    win_32: "https://download.mozilla.org/?product=firefox-latest-ssl&os=win&lang=br"
+    win_64: "https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=br"
+    mac: "https://download.mozilla.org/?product=firefox-latest-ssl&os=osx&lang=br"
+    linux_32: "ttps://download.mozilla.org/?product=firefox-latest-ssl&os=linux&lang=br"
+    linux_64: "https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=br"
     name: "Firefox"
     description: "Merdeer web"
     image: "firefox.png"
     website: "https://www.mozilla.org/fr/firefox/all/#br"
   02_thunderbird:
-    win_32: "thunderbird_win.exe"
+    win_32: "https://download.mozilla.org/?product=thunderbird-68.0-SSL&os=win&lang=br"
     win_64: ~
-    mac: "thunderbird_mac.dmg"
+    mac: "https://download.mozilla.org/?product=thunderbird-68.0-SSL&os=osx&lang=br"
     linux_32: ~
     linux_64: ~
     name: "Thunderbird"
@@ -20,9 +20,9 @@ software:
     image: "thunderbird.png"
     website: "https://www.thunderbird.net/br/"
   03_libreoffice:
-    win_32: "libreoffice_win32.msi"
-    win_64: "libreoffice_win64.msi"
-    mac: "libreoffice_mac.dmg"
+    win_32: "https://download.documentfoundation.org/libreoffice/stable/6.3.1/win/x86/LibreOffice_6.3.1_Win_x86.msi"
+    win_64: "https://download.documentfoundation.org/libreoffice/stable/6.3.1/win/x86_64/LibreOffice_6.3.1_Win_x64.msi"
+    mac: "https://download.documentfoundation.org/libreoffice/stable/6.3.1/mac/x86_64/LibreOffice_6.3.1_MacOS_x86-64.dmg"
     linux_32: ~
     linux_64: ~
     name: "LibreOffice"
@@ -30,9 +30,9 @@ software:
     image: "libreoffice.png"
     website: "https://www.libreoffice.org/"
   04_clementine:
-    win_32: "clementine_win.exe"
+    win_32: "https://github.com/clementine-player/Clementine/releases/download/1.3.1/ClementineSetup-1.3.1.exe"
     win_64: ~
-    mac: "clementine_mac.dmg"
+    mac: "https://github.com/clementine-player/Clementine/releases/download/1.3.1/clementine-1.3.1.dmg"
     linux_32: ~
     linux_64: ~
     name: "Clementine"
@@ -40,9 +40,9 @@ software:
     image: "clementine.png"
     website: "https://www.clementine-player.org/"
   05_gimp:
-    win_32: "gimp_windows.exe"
+    win_32: "https://download.gimp.org/mirror/pub/gimp/v2.10/windows/gimp-2.10.12-setup-3.exe"
     win_64: ~
-    mac: "gimp_mac.dmg"
+    mac: "https://download.gimp.org/mirror/pub/gimp/v2.10/osx/gimp-2.10.12-x86_64.dmg"
     linux_32: ~
     linux_64: ~
     name: "Gimp"
@@ -50,18 +50,18 @@ software:
     image: "gimp.gif"
     website: "http://gimp.org/"
   07_openshot:
-    win_32: ~
-    win_64: ~
-    mac: ~
+    win_32: https://github.com/OpenShot/openshot-qt/releases/download/v2.5.1/OpenShot-v2.5.1-x86.exe
+    win_64: https://github.com/OpenShot/openshot-qt/releases/download/v2.5.1/OpenShot-v2.5.1-x86_64.exe
+    mac: https://github.com/OpenShot/openshot-qt/releases/download/v2.5.1/OpenShot-v2.5.1-x86_64.dmg
     linux_32: ~
-    linux_64: ~
+    linux_64: https://github.com/OpenShot/openshot-qt/releases/download/v2.5.1/OpenShot-v2.5.1-x86_64.AppImage
     name: "Openshot"
     description: "Embanner videoioù"
     image: "openshot.jpg"
     website: "http://openshot.org/"
   08_homebank:
     win_32: ~
-    win_64: ~
+    win_64: http://homebank.free.fr/public/HomeBank-5.4-setup.exe
     mac: ~
     linux_32: ~
     linux_64: ~
@@ -70,9 +70,9 @@ software:
     image: "homebank.jpg"
     website: "http://homebank.free.fr/"
   09_vlc:
-    win_32: ~
+    win_32: https://ftp.free.org/mirrors/videolan/vlc/3.0.8/win32/vlc-3.0.8-win32.exe
     win_64: ~
-    mac: ~
+    mac: https://ftp.free.org/mirrors/videolan/vlc/3.0.8/macosx/vlc-3.0.8.dmg
     linux_32: ~
     linux_64: ~
     name: "VLC"
@@ -80,9 +80,9 @@ software:
     image: "vlc.png"
     website: "https://www.videolan.org/vlc/index.html"
   10_tuxpaint:
-    win_32: ~
+    win_32: https://sourceforge.net/projects/tuxpaint/files/tuxpaint/0.9.23/tuxpaint-0.9.23-win32-1-installer.exe/download
     win_64: ~
-    mac: ~
+    mac: https://sourceforge.net/projects/tuxpaint/files/tuxpaint/0.9.23/TuxPaint-0.9.23c.dmg/download
     linux_32: ~
     linux_64: ~
     name: "TuxPaint"
@@ -90,9 +90,9 @@ software:
     image: "tuxpaint.png"
     website: "http://tuxpaint.org/"
   11_pinta:
-    win_32: ~
+    win_32: https://github.com/PintaProject/Pinta/releases/download/1.6/pinta-1.6.exe
     win_64: ~
-    mac: ~
+    mac: https://github.com/PintaProject/Pinta/releases/download/1.6/Pinta.app.zip
     linux_32: ~
     linux_64: ~
     name: "Pinta"
@@ -100,9 +100,9 @@ software:
     image: "pinta.png"
     website: "https://pinta-project.com/pintaproject/pinta/"
   12_inkscape:
-    win_32: ~
-    win_64: ~
-    mac: ~
+    win_32: https://inkscape.org/gallery/item/18065/inkscape-0.92.5-x86.msi
+    win_64: https://inkscape.org/gallery/item/18066/inkscape-0.92.5-x64.msi
+    mac: https://inkscape.org/gallery/item/11269/Inkscape-0.92.2-1-x11-10.7-x86_64.dmg
     linux_32: ~
     linux_64: ~
     name: "Inkscape"
@@ -110,9 +110,9 @@ software:
     image: "inkscape.png"
     website: "https://inkscape.org/"
   13_scribus:
-    win_32: ~
-    win_64: ~
-    mac: ~
+    win_32: https://sourceforge.net/projects/scribus/files/scribus/1.4.8/scribus-1.4.8-windows.exe/download
+    win_64: https://sourceforge.net/projects/scribus/files/scribus/1.4.8/scribus-1.4.8-windows-x64.exe/download
+    mac: https://sourceforge.net/projects/scribus/files/scribus/1.4.8/scribus-1.4.8.dmg/download
     linux_32: ~
     linux_64: ~
     name: "Scribus"
@@ -124,9 +124,9 @@ software:
 
 choariou:
   1_supertux:
-    win_32: "supertux_win32.exe"
-    win_64: "supertux_win64.exe"
-    mac: "supertux_mac.dmg"
+    win_32: "https://github.com/SuperTux/supertux/releases/download/v0.6.0/SuperTux-v0.6.0-win32.msi"
+    win_64: "https://github.com/SuperTux/supertux/releases/download/v0.6.0/SuperTux-v0.6.0-win64.msi"
+    mac: "https://github.com/SuperTux/supertux/releases/download/v0.6.0/SuperTux-v0.6.0-Darwin.dmg"
     linux_32: ~
     linux_64: ~
     name: "Supertux"
@@ -134,25 +134,25 @@ choariou:
     image: "supertux.png"
     website: "https://www.supertux.org/"
   2_supertuxkart:
-    win_32: "supertuxkart_win32.exe"
-    win_64: "supertuxkart_win64.exe"
-    mac: "supertuxkart_mac.dmg"
+    win_32: "https://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/1.0/SuperTuxKart%201.0%20installer-32bit.exe/download"
+    win_64: "https://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/1.0/SuperTuxKart%201.0%20installer-64bit.exe/download"
+    mac: "https://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/1.0/SuperTuxKart-1.0-mac.zip/download"
     linux_32: ~
     linux_64: ~
     name: "SuperTuxKart"
     description: "C'hoari karrigoù evel Mario Kart"
     image: "supertuxkart.png"
     website: "https://supertuxkart.net/Main_Page"
-  3_freeciv:
-    win_32: "freeciv_win32.exe"
+  3_freecol:
+    win_32: "http://prdownloads.sourceforge.net/freecol/freecol-0.11.6-installer.exe?download"
     win_64: ~
-    mac: ~
+    mac: "http://prdownloads.sourceforge.net/freecol/freecol-0.11.6-mac.tar.bz2?download"
     linux_32: ~
     linux_64: ~
-    name: "FreeCiv"
+    name: "FreeCol"
     description: "C'hoari strategiezh tro-dre-dro"
-    image: "freeciv.png"
-    website: "http://freeciv.org"
+    image: "freecol.png"
+    website: "http://freecol.org"
 choariou_paeus:
   minecraft:
     name: "Minecraft"
@@ -164,6 +164,11 @@ choariou_paeus:
     description: "Ur Shoot 'em Up Roazhonat"
     link: "http://steredenn.pixelnest.io/"
     image: "steredenn.png"
+  hyperun:
+    name: "Hyperun"
+    description: "Ur c'hoari redadeg war marc'h-tan"
+    link: "https://store.steampowered.com/app/565390/Hyperun/"
+    image: "hyperun.jpg"
 
 arloadou:
   1_firefox:
@@ -212,17 +217,17 @@ arloadou:
 
 hunspell:
   1_libreoffice:
-    file: "difazier_libreoffice.oxt"
+    file: "https://extensions.libreoffice.org/extensions/an-drouizig-breton-spellchecker/0.16/@@download/file/difazier-an-drouizig-0.16.oxt"
     name: "Hunspell evit LibreOffice"
     description: "Difazier reizhskrivadurel"
     image: "libreoffice.png"
   2_firefox:
-    file: "difazier_firefox.xpi"
+    file: "https://addons.mozilla.org/firefox/downloads/file/1689625/difazier_an_drouizig-0.16.xpi"
     name: "Hunspell evit Firefox ha Thunderbird"
     description: "Difazier reizhskrivadurel"
     image: "firefox.png"
   3_languagetool:
-    file: "languagetool_libreoffice.oxt"
+    file: "https://languagetool.org/download/LanguageTool-4.4.1.oxt"
     name: "LanguageTool evit LibreOffice"
     description: "Difazier yezhadurel"
     image: "languagetool.png"
@@ -230,18 +235,18 @@ hunspell:
 
 difazier:
   1_version_1619:
-    win_64: "difazier_office1619_64.exe"
-    win_32: "difazier_office1619_32.msi"
+    win_64: "http://www.drouizig.org/images/stories/difazier/win/pakadaou/breton_spellchecker_m41_2016_x86_win64.exe"
+    win_32: "http://www.drouizig.org/images/stories/difazier/win/pakadaou/breton_spellchecker_m41_2016_x86_win32.msi"
     name: "Microsoft Office 2016/2019"
   2_version_13:
-    win_64: "difazier_office13_64.exe"
-    win_32: "difazier_office13_32.msi"
+    win_64: "http://www.drouizig.org/images/stories/difazier/win/pakadaou/breton_spellchecker_m41_2013_x86_win64.exe"
+    win_32: "http://www.drouizig.org/images/stories/difazier/win/pakadaou/breton_spellchecker_m41_2013_x86_win32.msi"
     name: "Microsoft Office 2013"
   3_version_10:
-    win_64: "difazier_office10_64.exe"
-    win_32: "difazier_office10_32.msi"
+    win_64: "http://www.drouizig.org/images/stories/difazier/win/pakadaou/breton_spellchecker_m41_2010_x86_win64.exe"
+    win_32: "http://www.drouizig.org/images/stories/difazier/win/pakadaou/breton_spellchecker_m41_2010_x86_win32.msi"
     name: "Microsoft Office 2010"
   4_version_0007:
     win_64: ~
-    win_32: "difazier_office0007.msi"
+    win_32: "http://www.drouizig.org/images/stories/difazier/win/pakadaou/breton_spellchecker_m41_200x_x86_win32.msi"
     name: "Microsoft Office 2000, 2002, 2003, 2007"

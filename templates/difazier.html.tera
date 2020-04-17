@@ -27,7 +27,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <a class = "btn btn-primary" href="/static/builds/{{hunspellEntry.file}}">Pellgargañ</a>
+                                            <a class = "btn btn-primary" href="{{hunspellEntry.file}}">Pellgargañ</a>
                                         </div>
                                     </div>
                                 </div>
@@ -56,9 +56,9 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             {%if difazierEntry.win_64%}
-                                                <a class = "btn btn-primary" href="/static/builds/{{difazierEntry.win_64}}">Pellgargañ</a>
+                                                <a class = "btn btn-primary" href="{{difazierEntry.win_64}}">Pellgargañ</a>
                                             {% else %}
-                                                <a class = "btn btn-primary" href="/static/builds/{{difazierEntry.win_32}}">Pellgargañ</a>
+                                                <a class = "btn btn-primary" href="{{difazierEntry.win_32}}">Pellgargañ</a>
                                             {% endif %}
                                         </div>
                                     </div>
@@ -75,7 +75,7 @@
                                             {%set platforms = [ 'win_64', 'win_32'] %}
                                             {%for platform in platforms %}
                                                 {%if difazierEntry[platform]%}
-                                                    <a href="/static/builds/{{difazierEntry[platform]}}">{{macros::trans_system(code=platform, archi=true)}}</a>
+                                                    <a href="{{difazierEntry[platform]}}">{{macros::trans_system(code=platform, archi=true)}}</a>
                                                     {%if not loop.last %} | {%endif%}
                                                 {%endif%}
                                             {%endfor%}

@@ -8,7 +8,7 @@
             <div class="col-md-12">
                 <div class="row software-entry">
                     <div class="col-md-12">
-                        <p><a class="btn btn-primary" href="/static/bookmarks_bedniverel.html" download>Pellgargañ ar roll sinedoù</a></p>
+                        <p><a class="btn btn-primary" href="https://raw.githubusercontent.com/Drouizig/staliaduriou/master/static/bookmarks_bedniverel.html" download="sinedou_bedniverel.html">Pellgargañ ar roll sinedoù</a></p>
                         <p>
                             <a href="https://support.mozilla.org/fr/kb/importer-marque-pages-fichier-html">
                                 Skoazell evit enporzhiañ ar sinedoù war Firefox (e galleg)
@@ -24,7 +24,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <p><a class="btn btn-primary" href="/static/Gerva-an-Drouizig-2017.pdf" download>Pellgargañ Gerva an Drouizig</a></p>
+                        <p><a class="btn btn-primary" href="http://www.drouizig.org/images/stories/dafar/geriaduriaou/Gerva-an-Drouizig-2017.pdf" download>Pellgargañ Gerva an Drouizig</a></p>
 
 
                     </div>
@@ -37,11 +37,20 @@
                   <div class="row">
                       <div class="col-md-12">
                           <ul>
-                              <li><a href="https://www.openstreetmap.bzh/">OpenStreetMap.bzh</a></li>
-                              <li><a href="https://voice.mozilla.org/br">Mozilla Common Voice</a></li>
-                              <li><a href="https://www.qwant.com/?l=br&r=FR&sr=br">Qwant</a></li>
-                              <li><a href="https://stal.bzh">Stal.bzh</a></li>
-				<li><a href="kjshdfj">Troer emgefreek</a></li>                      
+                              <li><a href="https://www.openstreetmap.bzh/">OpenStreetMap.bzh</a> (kartenn e brezhoneg)</li>
+                              <li><a href="https://voice.mozilla.org/br">Mozilla Common Voice</a> (reiñ h⋅e m⋅vouezh d'ar brezhoneg)</li>
+                              <li><a href="https://www.qwant.com/?l=br&r=FR&sr=br">Qwant</a> (keflusker enklas)</li>
+                              <li><a href="https://stal.bzh">Stal.bzh</a> (kavout stalioù brezhonek)</li>
+                              <li><a href="https://www.parkallann.bzh">Kej-mesk</a> (c'hoari)</li>
+                              <li><a href="https://framadate.org/">Framadate</a> (krouiñ sontadegoù)</li>
+                              <li>Chomlec'h postel e .bzh : <a href="https://gozmail.bzh/">Gozmail</a> pe <a href="https://www.korrimel.bzh/">Korrimel</a></li>
+                              <li>Ostilhoù Ofis Publik ar Brezhoneg:</li>
+                              <ul>
+				              <li><a href="http://www.brezhoneg.bzh/93-troer-emgefre.htm">Troer emgefreek</a></li> 
+				              <li><a href="http://meurgorf.brezhoneg.bzh/">Meurgorf</a></li> 
+				              <li><a href="http://www.brezhoneg.bzh/87-termofis.htm">Termofis</a></li> 
+				              <li><a href="http://www.brezhoneg.bzh/91-kerofis.htm">Kêrofis</a></li> 
+                            </ul>                     
 </div>
                   </div>
                     <h2>Klavier C'hwerty</h2>

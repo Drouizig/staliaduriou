@@ -38,7 +38,7 @@
                                                 {% set platform = "win_32"%}
                                             {% endif %}
 
-                                            <a class = "btn btn-primary" href="/static/builds/{{softwareEntry[platform]}}">Pellgargañ war {{macros::trans_system(code=platform)}}</a>
+                                            <a class = "btn btn-primary" href="{{softwareEntry[platform]}}">Pellgargañ war {{macros::trans_system(code=platform)}}</a>
 
                                         </div>
                                     </div>
@@ -56,7 +56,7 @@
                                             {%set platforms = [ 'win_64', 'win_32', 'mac','linux_32', 'linux_64' ] %}
                                             {%for platform in platforms %}
                                                 {%if softwareEntry[platform]%}
-                                                    <a href="/static/builds/{{softwareEntry[platform]}}">{{macros::trans_system(code=platform, archi=true)}}</a>
+                                                    <a href="{{softwareEntry[platform]}}">{{macros::trans_system(code=platform, archi=true)}}</a>
                                                     {%if not loop.last %} | {%endif%}
                                                 {%endif%}
                                             {%endfor%}
