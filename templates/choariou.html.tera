@@ -11,6 +11,7 @@
                         <h2>Digoust ha frank</h2>
                     </div>
                 </div>
+    <i>Evit staliañ ar meziantoù-mañ war GNU/Linux ec'h erbedomp deoc'h tremen dre ar veziantaoueg.</i>
                 {% for key, softwareEntry in data.choariou %}
                     <div class="row software-entry">
                         <div class="col-md-1">
@@ -27,19 +28,21 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            {% set platform = "win_64"%}
-                                            {%if system == 'Mac' and softwareEntry.mac%}
-                                                {% set platform = "mac"%}
-                                            {% elif system =='Linux' and softwareEntry.linux_64%}
-                                                {% set platform = "linux_64"%}
-                                            {% elif system =='Linux' and softwareEntry.linux_32%}
-                                                {% set platform = "linux_32"%}
-                                            {% elif not softwareEntry.win_64%}
-                                                {% set platform = "win_32"%}
+                                            {% set win_platform = "win_64"%}
+                                            {% if not softwareEntry.win_64%}
+                                                {% set win_platform = "win_32"%}
                                             {% endif %}
 
-                                            <a class = "btn btn-primary" href="{{softwareEntry[platform]}}">Pellgargañ war {{macros::trans_system(code=platform)}}</a>
-
+                                            {%if softwareEntry[win_platform]%}
+                                                <a class = "btn btn-primary" href="{{softwareEntry[win_platform]}}">
+                                                    <img src="/static/images/logo/windows.png" width="16"/>Pellgargañ war {{macros::trans_system(code=win_platform)}}
+                                                </a>
+                                            {%endif%}
+                                            {%if softwareEntry['mac']%}
+                                                <a class = "btn btn-primary" href="{{softwareEntry['mac']}}">
+                                                    <img src="/static/images/logo/apple.png"width="16"/>Pellgargañ war Mac
+                                                    </a>
+                                            {%endif%}
                                         </div>
                                     </div>
                                 </div>
@@ -91,6 +94,14 @@
                                             <a class = "btn btn-primary" href="{{choariEntry.link}}">Prenañ war al lec'hienn</a>
 
                                         </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            {{choariEntry.platform}}
+
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>

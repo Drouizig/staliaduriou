@@ -18,7 +18,8 @@ struct ChoariPaeus {
     link: Option<String>,
     name: Option<String>,
     description: Option<String>,
-    image: Option<String>
+    image: Option<String>,
+    platform: Option<String>
 }
 
 #[derive(Deserialize, Serialize, Debug)]

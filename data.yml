@@ -159,17 +159,19 @@ choariou_paeus:
     description: "Ar c'hoari hollvrudet"
     link: "https://minecraft.net"
     image: "minecraft.jpg"
+    platform: "Ar stumm Java war Windows, Mac ha GNU/Linux a zo troet e brezhoneg hepken."
   sterdenn:
     name: "Sterdenn"
     description: "Ur Shoot 'em Up Roazhonat"
     link: "http://steredenn.pixelnest.io/"
     image: "steredenn.png"
+    platform: "War Windows, Mac, GNU/Linux, Playsation 4, Xbox One, Switch hag iPhone/iPad"
   hyperun:
     name: "Hyperun"
     description: "Ur c'hoari redadeg war marc'h-tan"
     link: "https://store.steampowered.com/app/565390/Hyperun/"
     image: "hyperun.jpg"
-
+    platform: "War Windows"
 arloadou:
   1_firefox:
     android: "https://play.google.com/store/apps/details?id=org.mozilla.firefox"
@@ -183,37 +185,48 @@ arloadou:
     name: "Wikipedia"
     description: "An holloueziadur frank"
     image: "wikipedia.png"
-  3_swiftkey:
+  3_stalbzh:
+    android: "https://www.youtube.com/watch?v=W1iE9SPxvBE"
+    ios: "https://www.youtube.com/watch?v=-HyD0lAvCbw"
+    name: "Stal.bzh"
+    description: "Kavout an dud a-vicher a ra gant ar brezhoneg tro-dro deoc'h"
+    image: "stal.png"
+  4_edubreizh:
+    android: "https://play.google.com/store/apps/details?id=com.elearningtouch.edubreizh"
+    ios: "https://apps.apple.com/us/app/edubreizh/id1076516200"
+    name: "Edubreizh"
+    description: "Deskiñ brezhoneg enlinenn"
+    image: "edubreizh.png"
+  5_swiftkey:
     android: "https://play.google.com/store/apps/details?id=com.touchtype.swiftkey&hl=en_US"
     ios: "https://itunes.apple.com/us/app/swiftkey-keyboard/id911813648"
     name: SwiftKey
     description: "Klavier brezhonek"
     image: "swiftkey.png"
-  4_qwant:
+  6_qwant:
     android: "https://play.google.com/store/apps/details?id=com.qwant.liberty&hl=fr"
     ios: "https://itunes.apple.com/us/app/qwant/id924470452"
     name: Qwant
     description: "Lusker enklask doujus"
     image: "qwant.png"
-  5_vanilla:
+  7_vanilla:
     android: "https://play.google.com/store/apps/details?id=ch.blinkenlights.android.vanilla&hl=en_US"
     ios: ~
     name: "Vanilla Music"
     description: "Lenner sonerezh"
     image: "vanilla.png"
-  6_k9:
+  8_k9:
     android: "https://play.google.com/store/apps/details?id=com.fsck.k9&hl=en"
     ios: ~
     name: "K-9 Mail"
     description: "Lenner posteloù"
     image: "k9.png"
-  7_osmand:
+  9_osmand:
     android: "https://play.google.com/store/apps/details?id=net.osmand&hl=en_US"
     ios: "https://itunes.apple.com/us/app/osmand-maps-travel-navigate/id934850257"
     name: "OsmAnd"
     description: "Arload GPS gant ur gartenn e brezhoneg"
     image: "osmand.png"
-  
 
 hunspell:
   1_libreoffice:

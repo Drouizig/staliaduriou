@@ -27,28 +27,13 @@
                                                 {% set platform = "ios"%}
                                             {% endif %}
 
-                                            <a class = "btn btn-primary" href="{{arloadEntry[platform]}}">Pellgargañ war {{macros::trans_system(code=platform)}}</a>
+                                            <a class = "btn btn-primary" href="{{arloadEntry['android']}}">
+                                                <img src="/static/images/logo/android.png" width="16"/>Pellgargañ war Android
+                                            </a>
+                                            <a class = "btn btn-primary" href="{{arloadEntry['ios']}}">
+                                                <img src="/static/images/logo/apple.png" width="16"/>Pellgargañ war iPhone
+                                            </a>
 
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            An holl bellgargadennoù :
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            {%set platforms = [ 'android', 'ios' ] %}
-                                            {%for platform in platforms %}
-                                                {%if arloadEntry[platform]%}
-                                                    <a href="{{arloadEntry[platform]}}">{{macros::trans_system(code=platform, archi=true)}}</a>
-                                                    {%if not loop.last %} | {%endif%}
-                                                {%endif%}
-                                            {%endfor%}
                                         </div>
                                     </div>
                                 </div>
