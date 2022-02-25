@@ -119,9 +119,6 @@ software:
     description: "Aozer pajennoù"
     image: "scribus.png"
     website: "https://www.scribus.net/"
-
-
-
 choariou:
   1_supertux:
     win_32: "https://github.com/SuperTux/supertux/releases/download/v0.6.0/SuperTux-v0.6.0-win32.msi"
@@ -154,14 +151,20 @@ choariou:
     image: "freecol.png"
     website: "http://freecol.org"
 choariou_paeus:
+  flipon:
+    name: "Flipon"
+    description: "Ur c'hoari Puzzle Roazhonat"
+    link: "http://flipon.net/"
+    image: "flipon.png"
+    platform: "War Windows, Mac, GNU/Linux, Switch, Android hag iPhone/iPad"
   minecraft:
     name: "Minecraft"
     description: "Ar c'hoari hollvrudet"
     link: "https://minecraft.net"
     image: "minecraft.jpg"
     platform: "Ar stumm Java war Windows, Mac ha GNU/Linux a zo troet e brezhoneg hepken."
-  sterdenn:
-    name: "Sterdenn"
+  steredenn:
+    name: "Steredenn"
     description: "Ur Shoot 'em Up Roazhonat"
     link: "http://steredenn.pixelnest.io/"
     image: "steredenn.png"
@@ -172,6 +175,22 @@ choariou_paeus:
     link: "https://store.steampowered.com/app/565390/Hyperun/"
     image: "hyperun.jpg"
     platform: "War Windows"
+choariou_web:
+  1_gerdle:
+    name: "Gerdle"
+    image: "gerdle.png"
+    description: "Ur c'hoari doare \"Motus\" gant ur ger nevez da zivinout bemdez"
+    link: "https://brezhonadur.com/gerdle.html"
+  1_bombparty:
+    name: "Bomb party"
+    image: "bombparty.png"
+    description: "Kavit gerioù adalek ur silabenn, a-enep tud all dre ar genrouedad."
+    link: "https://jklm.fun/"
+  2_kejmesk:
+    name: "Kej-mesk"
+    image: "kejmesk.png"
+    description: "Kavit ar muiañ a c'herioù war ar gael!"
+    link: "https://www.parkallann.bzh"
 arloadou:
   1_firefox:
     android: "https://play.google.com/store/apps/details?id=org.mozilla.firefox"

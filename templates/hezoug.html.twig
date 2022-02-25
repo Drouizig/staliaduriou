@@ -1,0 +1,46 @@
+{% extends "base.html.twig" %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-12"><h1>Arloadoù hezoug</h1></div>
+    </div>
+    <div class="row">
+            <div class="col-md-12">
+                {% for key, arloadEntry in data %}
+                    <div class="row software-entry">
+                        <div class="col-md-1">
+                            <img src="./static/images/logo/{{arloadEntry.image}}" width=64" />
+                        </div>
+                        <div class="col-md-11">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4>{{arloadEntry.name}}</h4>
+                                            <span class="subtitle">{{arloadEntry.description}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            {% set platform = "android"%}
+                                            {%if system == 'iPhone' and arloadEntry.ios%}
+                                                {% set platform = "ios"%}
+                                            {% endif %}
+
+                                            <a class = "btn btn-primary" href="{{arloadEntry['android']}}">
+                                                <img src="./static/images/logo/android.png" width="16"/>Pellgargañ war Android
+                                            </a>
+                                            <a class = "btn btn-primary" href="{{arloadEntry['ios']}}">
+                                                <img src="./static/images/logo/apple.png" width="16"/>Pellgargañ war iPhone
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+

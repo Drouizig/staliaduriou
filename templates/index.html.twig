@@ -1,0 +1,71 @@
+{% extends "base.html.twig" %}
+{% block content %}
+{% import "macros.html.twig" as macros %}
+    <div class="row">
+        <div class="col-md-12"><h1>Meziantoù</h1></div>
+    </div>
+    <i>Evit staliañ ar meziantoù-mañ war GNU/Linux ec'h erbedomp deoc'h tremen dre ar veziantaoueg.</i>
+    <div class="row">
+            <div class="col-md-12">
+                {% for key, softwareEntry in data %}
+                <div class="row software-entry">
+                    <div class="col-md-1">
+                        <img src="./static/images/logo/{{softwareEntry.image}}" width=64" />
+                    </div>
+                    <div class="col-md-11">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h4><a href="{{softwareEntry.website}}">{{softwareEntry.name}}</a></h4>
+                                        <span class="subtitle">{{softwareEntry.description}}</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {% set win_platform = "win_64"%}
+                                        {% if not softwareEntry.win_64%}
+                                            {% set win_platform = "win_32"%}
+                                        {% endif %}
+
+                                        {%if softwareEntry[win_platform]%}
+                                            <a class = "btn btn-primary" href="{{softwareEntry[win_platform]}}">
+                                                <img src="./static/images/logo/windows.png" width="16"/>Pellgargañ war {{ macros.trans_system(win_platform)}}
+                                            </a>
+                                        {%endif%}
+                                        {%if softwareEntry['mac']%}
+                                            <a class = "btn btn-primary" href="{{softwareEntry['mac']}}">
+                                                <img src="./static/images/logo/apple.png"width="16"/>Pellgargañ war Mac
+                                                </a>
+                                        {%endif%}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        An holl bellgargadennoù :
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {%set platforms = [ 'win_64', 'win_32', 'mac','linux_32', 'linux_64' ] %}
+                                        {%for platform in platforms %}
+                                            {%if softwareEntry[platform]%}
+                                                <a href="{{softwareEntry[platform]}}">{{macros.trans_system(platform, true)}}</a>
+                                                {%if not loop.last %} | {%endif%}
+                                            {%endif%}
+                                        {%endfor%}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+

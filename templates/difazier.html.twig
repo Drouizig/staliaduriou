@@ -1,0 +1,92 @@
+{% extends "base.html.twig" %}
+{% block content %}
+{% import "macros.html.twig" as macros %}
+    <div class="row">
+        <div class="col-md-12"><h1>Difazier</h1></div>
+    </div>
+    <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Difazier Hunspell</h2>
+                    </div>
+                </div>
+                {% for key, hunspellEntry in data.hunspell %}
+                    <div class="row software-entry">
+                        <div class="col-md-1">
+                            <img src="./static/images/logo/{{hunspellEntry.image}}" width=64" />
+                        </div>
+                        <div class="col-md-11">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4>{{hunspellEntry.name}}</h4>
+                                            <span class="subtitle">{{hunspellEntry.description}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <a class = "btn btn-primary" href="{{hunspellEntry.file}}">Pellgargañ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>An Drouizig difazier evit Microsoft Office</h2>
+                    </div>
+                </div>
+                {% for key, difazierEntry in data.difazier %}
+                    <div class="row software-entry">
+                        <div class="col-md-1">
+                            <img src="./static/images/logo/difazier.png" width=64" />
+                        </div>
+                        <div class="col-md-11">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4>{{difazierEntry.name}}</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            {%if difazierEntry.win_64%}
+                                                <a class = "btn btn-primary" href="{{difazierEntry.win_64}}">Pellgargañ</a>
+                                            {% else %}
+                                                <a class = "btn btn-primary" href="{{difazierEntry.win_32}}">Pellgargañ</a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            An holl bellgargadennoù :
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            {%set platforms = [ 'win_64', 'win_32'] %}
+                                            {%for platform in platforms %}
+                                                {%if difazierEntry[platform]%}
+                                                    <a href="{{difazierEntry[platform]}}">{{macros.trans_system(platform, true)}}</a>
+                                                    {%if not loop.last %} | {%endif%}
+                                                {%endif%}
+                                            {%endfor%}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+

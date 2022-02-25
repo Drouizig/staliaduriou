@@ -6,4 +6,4 @@ use Symfony\Component\Yaml\Yaml;
 
 $value = Yaml::parseFile('./data.yml');
 
-echo $twig->render('index.html.twig', ['data' => $value['software']] );
+echo $twig->render('difazier.html.twig', ['data' => $value] );
